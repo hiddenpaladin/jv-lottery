@@ -1,43 +1,40 @@
 package core.basesyntax;
-
 import java.util.Random;
-
 public class ColorSupplier {
-    public enum Color {
-        Red,
-        Orange,
-        Yellow,
-        Green,
-        Blue,
-        Indigo,
-        Violet,
-        Pink,
-        Brown,
-        Black,
-        White,
-        Gray,
-        Cyan,
-        Magenta,
-        Turquoise,
-        Maroon,
-        Navy,
-        Teal,
-        Lime,
-        Olive,
-        Coral,
-        Beige,
-        Gold,
-        Silver,
-        Bronze,
-        Peach,
-        Lavender,
-        Mint,
-        Sky
+    public enum allColor{
+        RED,
+        ORANGE,
+        YELLOW,
+        GREEN,
+        BLUE,
+        INDIGO,
+        VIOLET,
+        PINK,
+        BROWN,
+        BLACK,
+        WHITE,
+        GRAY,
+        CYAN,
+        MAGENTA,
+        MAROON,
+        NAVY,
+        TEAL,
+        LIME,
+        OLIVE,
+        CORAL,
+        BEIGE,
+        GOLD,
+        SILVER,
+        BRONZE,
+        PEACH,
+        LAVENDER,
+        MINT,
+        SKY
     }
-
-    public static String getRandomColor() {
-        int index = new Random().nextInt(Color.values().length);
-        Color color = Color.values()[index];
-        return color.toString();
+    public static Color getRandomColor() {
+        int index = new Random().nextInt(allColor.values().length);
+        Color color = new Color();
+        color.setName(String.valueOf(allColor.values()[index]));
+        return color;
     }
 }
