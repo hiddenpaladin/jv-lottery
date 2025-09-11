@@ -1,7 +1,9 @@
 package core.basesyntax;
+
 import java.util.Random;
+
 public class ColorSupplier {
-    public enum allColor{
+    public enum AllColor {
         RED,
         ORANGE,
         YELLOW,
@@ -31,10 +33,11 @@ public class ColorSupplier {
         MINT,
         SKY
     }
+
     public static Color getRandomColor() {
-        int index = new Random().nextInt(allColor.values().length);
+        int index = new Random().nextInt(AllColor.values().length);
         Color color = new Color();
-        color.setName(String.valueOf(allColor.values()[index]));
+        color.setName(String.valueOf(AllColor.values()[index]));
         return color;
     }
 }
