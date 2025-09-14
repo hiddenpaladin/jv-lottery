@@ -7,8 +7,7 @@ public class Application {
 
         do {
             Ball ball = Lottery.getRandomBall();
-            System.out.println("the " + doneOut + " ball color is " + ball.getColor().getName()
-                    + "\n" + "the ball number is " + ball.getNumber());
+            System.out.println(ball);
             doneOut++;
         } while (doneOut < ballsToCreate);
     }
