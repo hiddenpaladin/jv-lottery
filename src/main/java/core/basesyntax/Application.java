@@ -5,11 +5,8 @@ public class Application {
 
     public static void main(String[] args) {
         Lottery lottery = new Lottery();
-        Ball[] arrayOfBalls = new Ball[NUMBER_OF_BALLS];
-
         for (int i = 0; i < NUMBER_OF_BALLS; i++) {
-            arrayOfBalls[i] = lottery.getRandomBall();
-            System.out.println(arrayOfBalls[i].stringResult());
+            System.out.println(lottery.getRandomBall());
         }
     }
 }
